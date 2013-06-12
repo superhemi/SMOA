@@ -1,9 +1,18 @@
 package superhemi.client;
 
-import cpw.mods.fml.client.registry.RenderingRegistry;
-import superhemi.CommonProxy;
 import net.minecraftforge.client.MinecraftForgeClient;
+import superhemi.SMOA.CommonProxy;
+import cpw.mods.fml.client.registry.RenderingRegistry;
 
+/**
+ * SMOA
+ * 
+ * ClientProxy
+ * 
+ * @author superhemi
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
 
 public class ClientProxy extends CommonProxy
 {
