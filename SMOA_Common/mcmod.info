@@ -1,0 +1,16 @@
+[{
+    "modid": "SMOA",
+    "name": "superhemi's Mod of Awesomeness",
+    "description": "need i say more?....",
+    "version": "1.0.0",
+    "mcversion": "1.5.2",
+    "url": "To Be Built",
+    "updateUrl": "",
+    "authors": [ "superhemi" ],
+    "credits": "",
+    "logoFile": "/mods/superhemi/textures/logo/logo.png",
+    "screenshots": [ ],
+    "parent": "",
+    "requiredMods": [ "Forge" ],
+    "dependencies": [  ]
+}]
