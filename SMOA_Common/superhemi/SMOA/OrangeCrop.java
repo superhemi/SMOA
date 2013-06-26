@@ -2,6 +2,8 @@ package superhemi.SMOA;
 
 import java.util.Random;
 
+import superhemi.SMOA.item.ModItems;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -75,16 +77,16 @@ public class OrangeCrop extends BlockCrops {
         return (world.getFullBlockLightValue(x, y, z) >= 8 || world
                 .canBlockSeeTheSky(x, y, z))
                 && (soil != null && soil.canSustainPlant(world, x, y - 1, z,
-                        ForgeDirection.UP, BaseForgeSMOA.OrangeSeeds));
+                        ForgeDirection.UP, ModItems.OrangeSeeds));
     }
 
     @Override
     public int idDropped (int metadata, Random random, int par2) {
         switch (metadata) {
         case 0:
-            return BaseForgeSMOA.OrangeSeeds.itemID;
+            return ModItems.OrangeSeeds.itemID;
         case 1:
-            return BaseForgeSMOA.OrangeFruit.itemID;
+            return ModItems.OrangeFruit.itemID;
         default:
             // Error case!
             return -1; // air
@@ -93,7 +95,7 @@ public class OrangeCrop extends BlockCrops {
 
     @Override
     public int idPicked (World world, int x, int y, int z) {
-        return BaseForgeSMOA.OrangeSeeds.itemID;
+        return ModItems.OrangeSeeds.itemID;
     }
     public void registerIcons(IconRegister iconRegister)
 	{

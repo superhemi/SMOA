@@ -6,6 +6,8 @@ import net.minecraft.util.StatCollector;
 
 import org.lwjgl.opengl.GL11;
 
+import superhemi.SMOA.tileentity.TileEntityOsmiumFurnace;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
