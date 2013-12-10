@@ -27,8 +27,8 @@ public class ItemSMOA extends Item {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister iconRegister) {
+    public void registerIcons(IconRegister register) {
 
-        itemIcon = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
+        itemIcon = register.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
     }
 }

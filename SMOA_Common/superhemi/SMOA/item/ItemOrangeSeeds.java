@@ -1,5 +1,7 @@
 package superhemi.SMOA.item;
 
+import superhemi.SMOA.BaseForgeSMOA;
+import superhemi.SMOA.lib.Strings;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.ItemSeeds;
 
@@ -20,7 +22,8 @@ public class ItemOrangeSeeds extends ItemSeeds
         super(id, i, b);
         
         maxStackSize = 64;
-        setUnlocalizedName("Orange Seeds");
+        this.setUnlocalizedName(Strings.ORANGE_SEEDS_NAME);
+        this.setCreativeTab(BaseForgeSMOA.tabsSMOA);
 }
 	public void registerIcons(IconRegister iconRegister)
 	{

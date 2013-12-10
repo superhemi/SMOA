@@ -1,14 +1,10 @@
 package superhemi.SMOA.block;
 
 import superhemi.SMOA.lib.BlockIds;
-import superhemi.SMOA.lib.Reference;
 import superhemi.SMOA.lib.Strings;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IconRegister;
 
 /**
  * SMOA
@@ -20,29 +16,25 @@ import net.minecraft.client.renderer.texture.IconRegister;
  * 
  */
 
-public class ModBlocks extends Block {
-
-    public ModBlocks(int par1, Material par2Material) {
-        super(par1, par2Material);
-    }
+public class ModBlocks {
 
     /* Mod block instances */
-    public static Block osmiumblock;
-    public static Block osmiumore;
-    public static Block osmiumfurnace;
+    public static Block OsmiumBlock;
+    public static Block OsmiumOre;
+    public static Block OsmiumFurnace;
     public static int osmiumfurnaceidle;
     public static int osmiumfurnaceburning;
 
     public static void init() {
 
-        osmiumblock = new BlockOsmiumBlock(BlockIds.OSMIUM_BLOCK, 1, Material.ground);
-        osmiumore = new BlockOsmiumOre(BlockIds.OSMIUM_ORE, 1, Material.rock);
-        osmiumfurnace = new OsmiumFurnace(BlockIds.OSMIUM_FURNACE, false);
+        OsmiumBlock = new BlockOsmiumBlock(BlockIds.OSMIUM_BLOCK_DEFAULT, 1, Material.ground);
+        OsmiumOre = new BlockOsmiumOre(BlockIds.OSMIUM_ORE_DEFAULT, 1, Material.rock);
+        OsmiumFurnace = new OsmiumFurnace(BlockIds.OSMIUM_FURNACE_DEFAULT, false);
 
 
-        GameRegistry.registerBlock(osmiumblock, Strings.OSMIUM_BLOCK_NAME);
-        GameRegistry.registerBlock(osmiumore, Strings.OSMIUM_ORE_NAME);
-        GameRegistry.registerBlock(osmiumfurnace, Strings.OSMIUM_FURNACE_NAME);
+        GameRegistry.registerBlock(OsmiumBlock, Strings.OSMIUM_BLOCK_NAME);
+        GameRegistry.registerBlock(OsmiumOre, Strings.OSMIUM_ORE_NAME);
+        GameRegistry.registerBlock(OsmiumFurnace, Strings.OSMIUM_FURNACE_NAME);
 
         initBlockRecipes();
     }
@@ -52,10 +44,4 @@ public class ModBlocks extends Block {
        
     }
     
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister iconRegister) {
-
-        blockIcon = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
-    }
 }

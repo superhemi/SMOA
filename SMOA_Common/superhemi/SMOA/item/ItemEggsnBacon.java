@@ -1,5 +1,8 @@
 package superhemi.SMOA.item;
 
+import superhemi.SMOA.BaseForgeSMOA;
+import superhemi.SMOA.lib.Reference;
+import superhemi.SMOA.lib.Strings;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.ItemFood;
 
@@ -20,12 +23,18 @@ public class ItemEggsnBacon extends ItemFood
         super(id, i, b);
         
         maxStackSize = 64;
-        setUnlocalizedName("Eggs N' Bacon");
+        this.setUnlocalizedName(Strings.EGGS_N_BACON_NAME);
+        this.setCreativeTab(BaseForgeSMOA.tabsSMOA);
         setAlwaysEdible();
 }
-	public void registerIcons(IconRegister iconRegister)
-	{
-	         itemIcon = iconRegister.registerIcon("superhemi:EggsnBacon");
-	}
+
+    public ItemFood setPotionEffect(int id, int i, int j, float f) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+    public void registerIcons(IconRegister iconRegister) {
+
+        itemIcon = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
+}
 }
 

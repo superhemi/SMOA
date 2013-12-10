@@ -1,12 +1,13 @@
 package superhemi.SMOA.item;
 
+import superhemi.SMOA.BaseForgeSMOA;
+import superhemi.SMOA.lib.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.passive.EntityCow;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBucket;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumMovingObjectType;
 import net.minecraft.util.MovingObjectPosition;
@@ -25,14 +26,15 @@ import net.minecraftforge.event.entity.player.FillBucketEvent;
  * 
  */
 
-public class ItemOsmiumBucket extends ItemBucket {
+public class ItemOsmiumBucket extends ItemSMOA {
 
 	private int isFull;
 	   
 	   public ItemOsmiumBucket(int par1, int par2) {
-	      super(par1, par2);
+	      super(par1);
 	      this.isFull = par2;            // This is really important; That was what I've forgotten.
-	      setUnlocalizedName("Osmium Bucket");
+	      this.setUnlocalizedName(Strings.OSMIUM_BUCKET_NAME);
+	        this.setCreativeTab(BaseForgeSMOA.tabsSMOA);
 	   }
 	   
 	    /**

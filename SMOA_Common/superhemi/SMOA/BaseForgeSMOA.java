@@ -2,10 +2,7 @@ package superhemi.SMOA;
 
 import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.Mod.PostInit;
-import cpw.mods.fml.common.Mod.PreInit;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -16,6 +13,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import superhemi.SMOA.item.ModItems;
 import superhemi.SMOA.lib.Reference;
 import superhemi.SMOA.block.ModBlocks;
+import superhemi.SMOA.core.handlers.LocalizationHandler;
 import superhemi.SMOA.core.proxy.CommonProxy;
 import superhemi.SMOA.creativetab.CreativeTabSMOA;
 import superhemi.SMOA.tileentity.TileEntityOsmiumFurnace;
@@ -41,17 +39,22 @@ public class BaseForgeSMOA{
         @SidedProxy(clientSide = "superhemi.SMOA.core.proxy.ClientProxy", serverSide = "superhemi.SMOA.core.proxy.CommonProxy")
         public static CommonProxy proxy;
 
-        public static CreativeTabs tabsSMOA = new CreativeTabSMOA(CreativeTabs.getNextID(), Reference.MOD_ID);
+        public static CreativeTabs tabsSMOA = new CreativeTabSMOA(
+        		CreativeTabs.getNextID(), Reference.MOD_ID);
         
-        @PreInit
+       
         public void preInit(FMLPreInitializationEvent event) {
+            
+            // Load the localization files into the LanguageRegistry
+            LocalizationHandler.loadLanguages();
+            
             // Initialize mod blocks
             ModBlocks.init();
 
             // Initialize mod items
             ModItems.init();
         }
-        @Init
+       
         public void load(FMLInitializationEvent event)
         {
           LanguageRegistry.instance().addStringLocalization("itemGroup.SMOA", "en_US", "superhemi's Mod of Awesomeness");
@@ -61,7 +64,7 @@ public class BaseForgeSMOA{
           //GameRegistry.addShapedRecipe(new ItemStack(OsmiumFurnaceIdle), new Object[] { "xxx","x x","xxx", Character.valueOf('x'), OsmiumIngot});
         }
 
-        @PostInit
+       
         public void postInit(FMLPostInitializationEvent event)
         {
         	

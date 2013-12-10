@@ -2,9 +2,9 @@ package superhemi.SMOA.block;
 
 import superhemi.SMOA.BaseForgeSMOA;
 import superhemi.SMOA.lib.Strings;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
 
 /**
  * SMOA
@@ -16,7 +16,7 @@ import net.minecraft.client.renderer.texture.IconRegister;
  * 
  */
 
-public class BlockOsmiumBlock extends Block {
+public class BlockOsmiumBlock extends BlockSMOA {
 	
 	public BlockOsmiumBlock (int id, int texture, Material material) {
                 super(id, material);
@@ -24,8 +24,9 @@ public class BlockOsmiumBlock extends Block {
                 this.setCreativeTab(BaseForgeSMOA.tabsSMOA);
                 this.setHardness(3.5F);      
         }
-	public void registerIcons(IconRegister iconRegister)
-	{
-	         blockIcon = iconRegister.registerIcon("superhemi:OsmiumBlock");
-	}
+
+    public TileEntity createNewTileEntity(World world) {
+        // TODO Auto-generated method stub
+        return null;
+    }
 }

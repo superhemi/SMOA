@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties version="1.0">
+	<comment>English (en_US) Localization File</comment>
+	<entry key="item.BaconCooked.name">Bacon Cooked</entry>
+	<entry key="item.BaconRaw.name">Bacon Raw</entry>
+	<entry key="item.EggCooked.name">Egg Cooked</entry>
+	<entry key="item.EggScrambled.name">Egg Scrambled</entry>
+	<entry key="item.EggsnBacon.name">Eggs N Bacon</entry>
+	<entry key="item.OrangeFruit.name">Orange Fruit</entry>
+	<entry key="item.OrangeSeeds.name">Orange Seeds</entry>
+	<entry key="item.OsmiumArmor.name">Osmium Armor</entry>
+	<entry key="item.OsmiumAxe.name">Osmium Axe</entry>
+	<entry key="item.OsmiumBucket.name">Osmium Bucket</entry>
+	<entry key="item.OsmiumFishpole.name">Osmium Fishing Rod</entry>
+	<entry key="item.OsmiumHoe.name">Osmium Hoe</entry>
+	<entry key="item.OsmiumIngot.name">Osmium Ingot</entry>
+	<entry key="item.OsmiumPickaxe.name">Osmium Pickaxe</entry>
+	<entry key="item.OsmiumShears.name">Osmium Shears</entry>
+	<entry key="item.OsmiumSpade.name">Osmium Shovel</entry>
+	<entry key="item.OsmiumSword.name">Osmium Sword</entry>
+	<entry key="tile.OsmiumBlock.name">Osmium Block</entry>
+	<entry key="tile.OsmiumOre.name">Osmium Ore</entry>
+	<entry key="tile.OsmiumFurnace.name">Osmium Furnace</entry>
+	</properties>
+
+
+
+
+

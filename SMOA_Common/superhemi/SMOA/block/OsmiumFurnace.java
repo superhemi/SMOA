@@ -6,7 +6,6 @@ import superhemi.SMOA.BaseForgeSMOA;
 import superhemi.SMOA.tileentity.TileEntityOsmiumFurnace;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.EntityLiving;
@@ -33,7 +32,7 @@ import cpw.mods.fml.relauncher.SideOnly;
  * 
  */
 
-public class OsmiumFurnace extends BlockContainer
+public class OsmiumFurnace extends BlockSMOA
 {
     /**
      * Is the random generator used by furnace to drop the inventory contents in random directions.
@@ -222,11 +221,7 @@ public class OsmiumFurnace extends BlockContainer
 
     /**
      * Returns a new instance of a block's tile entity class. Called on placing the block.
-     */
-    public TileEntity createNewTileEntity(World par1World)
-    {
-        return new TileEntityOsmiumFurnace();
-    }
+     */      
 
     /**
      * Called when the block is placed in the world.

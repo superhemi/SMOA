@@ -32,8 +32,7 @@ import net.minecraftforge.common.ForgeDummyContainer;
  * 
  */
 
-@SuppressWarnings("deprecation")
-public class TileEntityOsmiumFurnace extends TileEntity implements ISidedInventory, net.minecraftforge.common.ISidedInventory
+public abstract class TileEntityOsmiumFurnace extends TileEntity implements ISidedInventory
 {
     private static final int[] field_102010_d = new int[] {0};
     private static final int[] field_102011_e = new int[] {2, 1};
@@ -482,10 +481,9 @@ public class TileEntityOsmiumFurnace extends TileEntity implements ISidedInvento
      * standard.
      */
 
-    @Override
     public int getStartInventorySide(ForgeDirection side)
     {
-        if (ForgeDummyContainer.legacyFurnaceSides)
+        if (ForgeDummyContainer.disableStitchedFileSaving)
         {
             if (side == ForgeDirection.DOWN) return 1;
             if (side == ForgeDirection.UP) return 0;
@@ -499,7 +497,6 @@ public class TileEntityOsmiumFurnace extends TileEntity implements ISidedInvento
         }
     }
 
-    @Override
     public int getSizeInventorySide(ForgeDirection side)
     {
         return 1;

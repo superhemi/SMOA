@@ -13,16 +13,16 @@ package superhemi.SMOA.lib;
 public class Strings {
 
     /* Block name constants */
-    public static final String OSMIUM_BLOCK_NAME = "osmiumBlock";
-    public static final String OSMIUM_ORE_NAME = "osmiumOre";
-    public static final String OSMIUM_FURNACE_NAME = "osmiumFurnace";
+    public static final String OSMIUM_BLOCK_NAME = "OsmiumBlock";
+    public static final String OSMIUM_ORE_NAME = "OsmiumOre";
+    public static final String OSMIUM_FURNACE_NAME = "OsmiumFurnace";
 
     /* Item name constants */
     public static final String BACON_COOKED_NAME = "BaconCooked";
     public static final String BACON_RAW_NAME = "BaconRaw";
     public static final String EGG_COOKED_NAME = "EggCooked";
     public static final String EGG_SCRAMBLED_NAME = "EggScrambled";
-    public static final String EGGS_N_BACON_NAME = "EggsNBacon";
+    public static final String EGGS_N_BACON_NAME = "EggsnBacon";
     public static final String ORANGE_FRUIT_NAME = "OrangeFruit";
     public static final String ORANGE_SEEDS_NAME = "OrangeSeeds";
     public static final String OSMIUM_ARMOR_NAME = "OsmiumArmor";

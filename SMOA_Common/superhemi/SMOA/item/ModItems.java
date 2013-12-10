@@ -57,26 +57,26 @@ public class ModItems {
         EnumToolMaterial toolOsmium = EnumHelper.addToolMaterial("Osmium", 3, 2000, 12.0F, 6, 22);
           
         /* Initialize each mod item individually */
-        EggCooked = new ItemEggCooked(ItemIds.EGG_COOKED, 2, 1.5F, false);
-        EggScrambled = new ItemEggScrambled(ItemIds.EGG_SCRAMBLED, 2, 2.0F, false);
-        BaconRaw = new ItemBaconRaw(ItemIds.BACON_RAW, 1, 1.5F, true);
-        BaconCooked = new ItemBaconCooked(ItemIds.BACON_COOKED, 4, 6.4F, false);
-        EggsnBacon = new ItemEggsnBacon(ItemIds.EGG_N_BACON, 10, 15.0F, false).setPotionEffect(Potion.moveSpeed.id, 10, 5, 1.0F);
-        OsmiumIngot = new ItemOsmiumIngot(ItemIds.OSMIUM_INGOT);
-        OsmiumShovel = (new ItemOsmiumSpade(ItemIds.OSMIUM_SPADE, toolOsmium)).setUnlocalizedName("Osmium Shovel");
-        OsmiumPickaxe = (new ItemOsmiumPickaxe(ItemIds.OSMIUM_PICKAXE, toolOsmium));
-        OsmiumAxe = (new ItemOsmiumAxe(ItemIds.OSMIUM_AXE, toolOsmium)).setUnlocalizedName("Osmium Axe");
-        OsmiumSword = (new ItemOsmiumSword(ItemIds.OSMIUM_SWORD, toolOsmium)).setUnlocalizedName("Osmium Sword");
-        OsmiumHoe = (new ItemOsmiumHoe(ItemIds.OSMIUM_HOE, toolOsmium)).setUnlocalizedName("Osmium Hoe");
+        EggCooked = new ItemEggCooked(ItemIds.EGG_COOKED_DEFAULT, 2, 1.5F, false);
+        EggScrambled = new ItemEggScrambled(ItemIds.EGG_SCRAMBLED_DEFAULT, 2, 2.0F, false);
+        BaconRaw = new ItemBaconRaw(ItemIds.BACON_RAW_DEFAULT, 1, 1.5F, true);
+        BaconCooked = new ItemBaconCooked(ItemIds.BACON_COOKED_DEFAULT, 4, 6.4F, false);
+        EggsnBacon = new ItemEggsnBacon(ItemIds.EGGS_N_BACON_DEFAULT, 10, 15.0F, false).setPotionEffect(Potion.moveSpeed.id, 10, 5, 1.0F);
+        OsmiumIngot = new ItemOsmiumIngot(ItemIds.OSMIUM_INGOT_DEFAULT);
+        OsmiumShovel = (new ItemOsmiumSpade(ItemIds.OSMIUM_SPADE_DEFAULT, toolOsmium));
+        OsmiumPickaxe = (new ItemOsmiumPickaxe(ItemIds.OSMIUM_PICKAXE_DEFAULT, toolOsmium));
+        OsmiumAxe = (new ItemOsmiumAxe(ItemIds.OSMIUM_AXE_DEFAULT, toolOsmium));
+        OsmiumSword = (new ItemOsmiumSword(ItemIds.OSMIUM_SWORD_DEFAULT, toolOsmium));
+        OsmiumHoe = (new ItemOsmiumHoe(ItemIds.OSMIUM_HOE_DEFAULT, toolOsmium));
         //OsmiumHelmet = new ItemOsmiumArmor(5020, OsmiumArmor, proxy.addArmor("OSMIUM"), 0).setUnlocalizedName("OsmiumHelmet").setCreativeTab(BaseForgeSMOA.tabSMOA);
         //OsmiumPlate = new ItemOsmiumArmor(5021, OsmiumArmor, proxy.addArmor("OSMIUM"), 1).setUnlocalizedName("OsmiumPlate").setCreativeTab(BaseForgeSMOA.tabSMOA);
         //OsmiumLegs = new ItemOsmiumArmor(5022, OsmiumArmor, proxy.addArmor("OSMIUM"), 2).setUnlocalizedName("OsmiumLegs").setCreativeTab(BaseForgeSMOA.tabSMOA);
         //OsmiumBoots = new ItemOsmiumArmor(5023, OsmiumArmor, proxy.addArmor("OSMIUM"), 3).setUnlocalizedName("OsmiumBoots").setCreativeTab(BaseForgeSMOA.tabSMOA);
-        OsmiumFishPole = new ItemOsmiumFishPole(ItemIds.OSMIUM_FISHPOLE);
-        OsmiumBucket = new ItemOsmiumBucket(ItemIds.OSMIUM_BUCKET, 0);
-        OsmiumShears = new ItemOsmiumShears(ItemIds.OSMIUM_SHEARS);
-        //OrangeSeeds = (ItemSeeds) new ItemSeeds(ItemIds.ORANGE_SEEDS, OrangeCrop.blockID, Block.tilledField.blockID);
-        OrangeFruit = new ItemOrangeFruit(ItemIds.ORANGE_FRUIT, 3, 5.0f, false);
+        OsmiumFishPole = new ItemOsmiumFishPole(ItemIds.OSMIUM_FISHPOLE_DEFAULT);
+        OsmiumBucket = new ItemOsmiumBucket(ItemIds.OSMIUM_BUCKET_DEFAULT, 0);
+        OsmiumShears = new ItemOsmiumShears(ItemIds.OSMIUM_SHEARS_DEFAULT);
+        //OrangeSeeds = (ItemSeeds) new ItemSeeds(ItemIds.ORANGE_SEEDS_DEFAULT, OrangeCrop.blockID, Block.tilledField.blockID);
+        OrangeFruit = new ItemOrangeFruit(ItemIds.ORANGE_FRUIT_DEFAULT, 3, 5.0f, false);
 
         ItemStack swordenchanted = new ItemStack(OsmiumSword);
         swordenchanted.addEnchantment(Enchantment.sharpness, 5);
@@ -87,7 +87,7 @@ public class ModItems {
         GameRegistry.addSmelting(Item.egg.itemID, new ItemStack(EggCooked), 0.35F);
         GameRegistry.addShapelessRecipe(new ItemStack(BaconRaw), new Object[] { Item.porkRaw });
         GameRegistry.addSmelting(BaconRaw.itemID, new ItemStack(BaconCooked), 0.35F);
-        GameRegistry.addRecipe(new ItemStack(EggsnBacon), new Object[] { "xy", "yx", Character.valueOf('x'), EggScrambled, Character.valueOf('y'), BaconCooked });
+        //GameRegistry.addRecipe(new ItemStack(EggsnBacon), new Object[] { "xy", "yx", Character.valueOf('x'), EggScrambled, Character.valueOf('y'), BaconCooked });
         GameRegistry.addShapedRecipe(new ItemStack(OsmiumShovel), new Object[] { " x "," y "," y ", Character.valueOf('x'), OsmiumIngot, Character.valueOf('y'), Item.stick});
         GameRegistry.addShapedRecipe(new ItemStack(OsmiumPickaxe), new Object[] { "xxx"," y "," y ", Character.valueOf('x'), OsmiumIngot, Character.valueOf('y'), Item.stick});
         GameRegistry.addShapedRecipe(new ItemStack(OsmiumAxe), new Object[] { "xx ","xy "," y ", Character.valueOf('x'), OsmiumIngot, Character.valueOf('y'), Item.stick});

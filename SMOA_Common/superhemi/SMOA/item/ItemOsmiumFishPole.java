@@ -1,9 +1,11 @@
 package superhemi.SMOA.item;
 
+import superhemi.SMOA.BaseForgeSMOA;
+import superhemi.SMOA.lib.Reference;
+import superhemi.SMOA.lib.Strings;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityFishHook;
-import net.minecraft.item.ItemFishingRod;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraft.world.World;
@@ -20,7 +22,7 @@ import cpw.mods.fml.relauncher.SideOnly;
  * 
  */
 
-public class ItemOsmiumFishPole extends ItemFishingRod {
+public class ItemOsmiumFishPole extends ItemSMOA {
 
 	 @SideOnly(Side.CLIENT)
 	    private Icon theIcon;
@@ -28,7 +30,8 @@ public class ItemOsmiumFishPole extends ItemFishingRod {
 	    public ItemOsmiumFishPole(int par1)
 	    {
 	        super(par1);
-	        setUnlocalizedName("Osmium Fishing Rod");
+	        this.setUnlocalizedName(Strings.OSMIUM_FISHPOLE_NAME);
+	        this.setCreativeTab(BaseForgeSMOA.tabsSMOA);
 	    }
 
 	    @SideOnly(Side.CLIENT)
@@ -77,11 +80,9 @@ public class ItemOsmiumFishPole extends ItemFishingRod {
 
 	        return par1ItemStack;
 	    }
-
-	    @SideOnly(Side.CLIENT)
-		public void registerIcons(IconRegister iconRegister)
-		{
-		         itemIcon = iconRegister.registerIcon("superhemi:OsmiumFishPole");
-		}
+	    public void registerIcons(IconRegister iconRegister) 
+        {
+            itemIcon = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
+    }
 	 
 }

@@ -2,9 +2,7 @@ package superhemi.SMOA.item;
 
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.EnumArmorMaterial;
-import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.IArmorTextureProvider;
 
 /**
  * SMOA
@@ -16,12 +14,11 @@ import net.minecraftforge.common.IArmorTextureProvider;
  * 
  */
 
-@SuppressWarnings("deprecation")
-public class ItemOsmiumArmor extends ItemArmor implements IArmorTextureProvider{
+public class ItemOsmiumArmor extends ItemSMOA {
 
 	public ItemOsmiumArmor(int par1, EnumArmorMaterial par2EnumArmorMaterial,
 			int par3, int par4) {
-		super(par1, par2EnumArmorMaterial, par3, par4);
+		super(par1);
 
 	}
 
